@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Keith Wang – Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:        #1a1816;
+    --ink-mid:    #4a4542;
+    --ink-light:  #8a8480;
+    --gold:       #b8892a;
+    --gold-light: #e8d199;
+    --gold-faint: #f7f0dc;
+    --cream:      #faf8f4;
+    --rule:       #d4c9a8;
+    --sidebar-bg: #1a1816;
+    --sidebar-text: #f0ebe0;
+    --sidebar-muted: #a09a8e;
+    --sidebar-rule: #3a3530;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #edeae2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 48px 24px;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 900px;
+    min-height: 1180px;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 4px 16px rgba(0,0,0,0.10);
+  }
+
+  .sidebar {
+    background: var(--sidebar-bg);
+    padding: 48px 28px 48px 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-wrap {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+    margin-bottom: 32px;
+  }
+
+  .photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    filter: grayscale(10%);
+  }
+
+  .sidebar-section {
+    margin-bottom: 32px;
+  }
+
+  .sidebar-label {
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .sidebar-rule {
+    height: 1px;
+    background: var(--sidebar-rule);
+    margin-bottom: 16px;
+  }
+
+  .edu-entry {
+    margin-bottom: 18px;
+  }
+
+  .edu-school {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--sidebar-text);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .edu-degree {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--sidebar-muted);
+    line-height: 1.45;
+  }
+
+  .main {
+    padding: 52px 48px 52px 44px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+
+  .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.0;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .name em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .title-line {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    line-height: 1.7;
+  }
+
+  .section {
+    margin-bottom: 36px;
+  }
+
+  .section-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .summary-text {
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 1.72;
+    color: var(--ink-mid);
+  }
+
+  .exp-entry {
+    margin-bottom: 28px;
+    padding-left: 16px;
+    border-left: 2px solid var(--gold-light);
+    position: relative;
+  }
+
+  .exp-entry::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .exp-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 2px;
+  }
+
+  .exp-company {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .exp-date {
+    font-size: 11px;
+    font-weight: 300;
+    color: var(--ink-light);
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+
+  .exp-role {
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .exp-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .exp-bullets li {
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 1.60;
+    color: var(--ink-mid);
+    padding-left: 14px;
+    position: relative;
+  }
+
+  .exp-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold-light);
+    font-size: 12px;
+    top: 2px;
+  }
+
+  @media print {
+    body { background: none; padding: 0; }
+    .page { box-shadow: none; width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <div class="photo-wrap">
+      <img src="https://8605291.fs1.hubspotusercontent-na2.net/hubfs/8605291/Clinician%20Photos/keith.png" alt="Keith Wang profile photo" />
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">Education</div>
+      <div class="sidebar-rule"></div>
+      <div class="edu-entry">
+        <div class="edu-school">Stanford University</div>
+        <div class="edu-degree">AI in Healthcare<br>Specialization</div>
+      </div>
+      <div class="edu-entry">
+        <div class="edu-school">University of London</div>
+        <div class="edu-degree">Banking &amp; Finance</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header class="header">
+      <div class="name">Keith<br><em>Wang</em></div>
+      <div class="title-line">Founder &amp; CEO &nbsp;·&nbsp; APAC Employee Benefits<br>Mental Health Commercial Leader</div>
+    </header>
+
+    <section class="section">
+      <div class="section-label">Profile</div>
+      <p class="summary-text">Founder and commercial leader with experience across employee benefits, EAP distribution, insurer partnerships, pediatric mental health, and APAC digital health strategy. Built HR lead-generation, provider partnerships, and clinical service models in Singapore, with direct experience selling into multinational employers, insurers, brokers, and healthcare partners.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Experience</div>
+
+      <div class="exp-entry">
+        <div class="exp-header">
+          <div class="exp-company">Bonfire Health / Nightingale Pediatrics</div>
+          <div class="exp-date">2020 — Present</div>
+        </div>
+        <div class="exp-role">CEO &amp; Founder</div>
+        <ul class="exp-bullets">
+          <li>Launched Singapore's first EAP broker, generating over 200 MNC HR leads in Singapore.</li>
+          <li>Launched Nightingale Pediatrics, a specialist practice for family mental health, and secured channel partnerships with Aon and Singlife in less than two years.</li>
+          <li>Built an integrated commercial model connecting clinical delivery, AI-enabled parenting support, and employer / insurer distribution for working-parent mental health.</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-header">
+          <div class="exp-company">Tokio Marine Asia</div>
+          <div class="exp-date">2016 — 2019</div>
+        </div>
+        <div class="exp-role">Digital Strategy, APAC</div>
+        <ul class="exp-bullets">
+          <li>Led the digitization of the insurer's employee benefits offerings in Singapore.</li>
+          <li>Worked across regional insurance stakeholders to support digital transformation and employee benefits modernization.</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+</body>
+</html>
