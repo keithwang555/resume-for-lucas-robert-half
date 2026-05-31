@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Keith Wang – Resume</title>
+<title>Keith Wang – Professional Resume</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -92,7 +92,7 @@
   }
 
   .edu-entry {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .edu-school {
@@ -127,31 +127,58 @@
 
   .header {
     border-bottom: 1px solid var(--rule);
-    padding-bottom: 28px;
-    margin-bottom: 36px;
+    padding-bottom: 24px;
+    margin-bottom: 32px;
   }
 
   .name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 52px;
+    font-size: 48px;
     font-weight: 300;
     letter-spacing: -0.01em;
-    line-height: 1.0;
+    line-height: 1.1;
     color: var(--ink);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .title-line {
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 500;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--ink-light);
-    line-height: 1.7;
+    line-height: 1.6;
+  }
+
+  .contact-line {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--ink-mid);
+    line-height: 1.5;
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .contact-line a {
+    color: var(--ink-mid);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .contact-line a:hover {
+    border-bottom-color: var(--gold);
+  }
+
+  .contact-line .wa-link {
+    color: var(--gold);
+    font-weight: 500;
   }
 
   .section {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
 
   .section-label {
@@ -181,7 +208,7 @@
   }
 
   .exp-entry {
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     padding-left: 16px;
     border-left: 2px solid var(--gold-light);
     position: relative;
@@ -223,25 +250,25 @@
   }
 
   .exp-role {
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.10em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   .exp-bullets {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
   }
 
   .exp-bullets li {
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 300;
-    line-height: 1.60;
+    line-height: 1.55;
     color: var(--ink-mid);
     padding-left: 14px;
     position: relative;
@@ -253,7 +280,7 @@
     left: 0;
     color: var(--gold-light);
     font-size: 12px;
-    top: 2px;
+    top: 1px;
   }
 
   @media print {
@@ -292,12 +319,18 @@
 
     <header class="header">
       <div class="name">Keith Wang</div>
-      <div class="title-line">Founder &amp; CEO &nbsp;·&nbsp; APAC Employee Benefits<br>Mental Health Commercial Leader</div>
+      <div class="title-line">APAC Business Development Leader &nbsp;·&nbsp; Corporate Partnerships Expert &nbsp;·&nbsp; Digital Health Expert</div>
+      <div class="contact-line">
+        <span>Singapore</span>
+        <span><a href="mailto:keithwang5@gmail.com">keithwang5@gmail.com</a></span>
+        <span><a href="https://wa.me/6596584235" class="wa-link">+65 96584235 (WhatsApp)</a></span>
+        <span><a href="https://www.linkedin.com/in/keithwang5" target="_blank">linkedin.com/in/keithwang5</a></span>
+      </div>
     </header>
 
     <section class="section">
       <div class="section-label">Profile</div>
-      <p class="summary-text">Founder and commercial leader with experience across employee benefits, EAP distribution, insurer partnerships, pediatric mental health, and APAC digital health strategy. Built HR lead-generation, provider partnerships, and clinical service models in Singapore, with direct experience selling into multinational employers, insurers, brokers, healthcare partners, and regional technology teams.</p>
+      <p class="summary-text">APAC commercial executive with a verified track record of structuring complex corporate partnerships, navigating multi-layered healthcare procurement matrices, and scaling business-to-business (B2B) enterprise distribution channels. Offers an optimal intersection of legacy insurance carrier compliance (Tokio Marine Asia), Fortune 500 corporate healthcare governance (Roche Diagnostics), and agile enterprise client acquisition within the Employee Benefits (EB) and Corporate Wellness sectors. Expert at translating data-driven health platforms and digital tools into distributable, institutional assets that satisfy broker panels, lower claims loss ratios, and capture high-value multinational corporate (MNC) portfolios.</p>
     </section>
 
     <section class="section">
@@ -310,9 +343,24 @@
         </div>
         <div class="exp-role">CEO &amp; Founder</div>
         <ul class="exp-bullets">
-          <li>Launched Singapore's first EAP broker, generating over 200 MNC HR leads in Singapore.</li>
-          <li>Launched Nightingale Pediatrics, a specialist practice for family mental health, and secured channel partnerships with Aon and Singlife in less than two years.</li>
-          <li>Built an integrated commercial model connecting clinical delivery, AI-enabled parenting support, and employer / insurer distribution for working-parent mental health.</li>
+          <li>Founded an independent Employee Assistance Program (EAP) brokerage for MNC clients and specialist family mental health clinics in Singapore.</li>
+          <li>Acquired a qualified pipeline of over 200 MNC accounts with an average headcount of 1,000 employees per organization (representing an addressable pool of 200,000+ members) with key account management and new business development responsibilities.</li>
+          <li>Secured channel distribution partnerships with Aon and Singlife for our family mental health business within a span of 2 years.</li>
+          <li>Managed the operational design of an integrated health delivery model, bridging digital health solutions, clinical care services, and corporate insurance reimbursement frameworks.</li>
+        </ul>
+      </div>
+
+      <div class="exp-entry">
+        <div class="exp-header">
+          <div class="exp-company">Roche Diagnostics</div>
+          <div class="exp-date">2022 - 2023</div>
+        </div>
+        <div class="exp-role">Head of Digital Diagnostics, Singapore</div>
+        <ul class="exp-bullets">
+          <li>Directed the regional commercialization and market access architecture for advanced digital diagnostics and healthcare data platforms within the Singapore market.</li>
+          <li>Managed high-value B2B commercial pipelines targeting major institutional hospital groups, navigating complex, multi-layered procurement frameworks, regulatory compliance committees, and IT infrastructure reviews.</li>
+          <li>Synchronized cross-functional execution units across clinical affairs, legal, regulatory operations, and regional marketing to translate complex diagnostic technical features into measurable commercial value propositions.</li>
+          <li>Maintained full business unit P&L responsibility, optimizing budget allocation and resource deployment to accelerate platform adoption within regulated health provider ecosystems.</li>
         </ul>
       </div>
 
@@ -321,10 +369,14 @@
           <div class="exp-company">Tokio Marine Asia</div>
           <div class="exp-date">2016 - 2019</div>
         </div>
-        <div class="exp-role">Digital Strategy, APAC</div>
+        <div class="exp-role">Digital Strategy, APAC (Employee Benefits &amp; Corporate Transformation)</div>
         <ul class="exp-bullets">
-          <li>Led the digitization of the insurer's employee benefits offerings in Singapore.</li>
-          <li>Worked across regional insurance stakeholders to support digital transformation and employee benefits modernization.</li>
+          <li>Spearheaded the digital transformation and monetization roadmap for the insurer's regional Employee Benefits (EB) portfolio.</li>
+          <li>Managed and launched the first regional EB application, Tokio Marine Care™, across 3 countries.</li>
+          <li>Innovation designer and implementation expert for digital transformation initiatives within the Philippines market.</li>
+          <li>Served as regional mentor and advisor to local marketing teams across 5 countries to optimize digital customer engagement.</li>
+          <li>Led and implemented 5 strategic go-to-market (GTM) programs delivering a combined sales ROI of 267%.</li>
+          <li>Co-led the regional deployment and implementation of Microsoft Dynamics infrastructure in Singapore.</li>
         </ul>
       </div>
 
